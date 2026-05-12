@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: adp-web
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: adp-web
+  template:
+    metadata:
+      labels:
+        app: adp-web
+    spec:
+      containers:
+        - name: adp-web
+          image: nginx
+          ports:
+            - containerPort: 80
