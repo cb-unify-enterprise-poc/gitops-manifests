@@ -13,5 +13,5 @@ adpWeb:
 
 adpAuth:
   image:
-    url: your-registry/adp-auth:latest
+    url: cloudbeesdemo/hackers-auth:2.0-0.0.2
   hostname: adp-auth.adp-uat.preview.cb-demos.io
