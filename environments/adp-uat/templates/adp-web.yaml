@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: adp-web
-          iimage: "{{ .Values.adpWeb.image.url }}"
+          image: "{{ .Values.adpWeb.image.url }}"
 ---
 apiVersion: v1
 kind: Service
