@@ -8,7 +8,7 @@ adpApi:
 
 adpWeb:
   image:
-    url: your-registry/adp-web:latest
+    url: cloudbeesdemo/hackers-web:1.0-0.0.1
   hostname: adp-web.adp-uat.preview.cb-demos.io
 
 adpAuth:
