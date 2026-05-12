@@ -3,7 +3,7 @@ namespace: adp-uat
 
 adpApi:
   image:
-    url: your-registry/adp-api:latest
+    url: cloudbeesdemo/hackers-api:3.0-0.0.2
   hostname: adp-api.adp-uat.preview.cb-demos.io
 
 adpWeb:
