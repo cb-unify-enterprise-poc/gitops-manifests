@@ -3,7 +3,7 @@ namespace: adp-fit
 
 adpApi:
   image:
-    url: your-registry/adp-api:latest
+    url: cloudbeesdemo/hackers-api:3.0-0.0.2
   hostname: adp-api.adp-fit.preview.cb-demos.io
 
 adpWeb:
