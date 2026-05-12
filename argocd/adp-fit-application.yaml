@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: adp-fit
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/cb-unify-enterprise-poc/gitops-manifests.git
+    targetRevision: main
+    path: environments/adp-fit
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: adp-fit
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
