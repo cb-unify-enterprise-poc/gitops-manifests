@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: adp-auth
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: adp-auth
+  template:
+    metadata:
+      labels:
+        app: adp-auth
+    spec:
+      containers:
+        - name: adp-auth
+          image: nginx
+          ports:
+            - containerPort: 80
