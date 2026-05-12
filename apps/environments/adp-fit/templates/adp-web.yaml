@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: adp-web
+  namespace: { .Values.namespace }
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: adp-web
+  template:
+    metadata:
+      labels:
+        app: adp-web
+    spec:
+      containers:
+        - name: adp-web
+          image: { .Values.adpWeb.image.url }
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: adp-web
+  namespace: { .Values.namespace }
+spec:
+  selector:
+    app: adp-web
+  ports:
+    - port: 80
+      targetPort: 8080

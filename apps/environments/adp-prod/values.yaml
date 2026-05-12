@@ -1,0 +1,17 @@
+environment: adp-prod
+namespace: adp-prod
+
+adpApi:
+  image:
+    url: your-registry/adp-api:latest
+  hostname: adp-api.adp-prod.preview.cb-demos.io
+
+adpWeb:
+  image:
+    url: your-registry/adp-web:latest
+  hostname: adp-web.adp-prod.preview.cb-demos.io
+
+adpAuth:
+  image:
+    url: your-registry/adp-auth:latest
+  hostname: adp-auth.adp-prod.preview.cb-demos.io

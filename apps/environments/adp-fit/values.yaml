@@ -1,0 +1,17 @@
+environment: adp-fit
+namespace: adp-fit
+
+adpApi:
+  image:
+    url: your-registry/adp-api:latest
+  hostname: adp-api.adp-fit.preview.cb-demos.io
+
+adpWeb:
+  image:
+    url: your-registry/adp-web:latest
+  hostname: adp-web.adp-fit.preview.cb-demos.io
+
+adpAuth:
+  image:
+    url: your-registry/adp-auth:latest
+  hostname: adp-auth.adp-fit.preview.cb-demos.io

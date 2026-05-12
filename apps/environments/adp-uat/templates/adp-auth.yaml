@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: adp-auth
+  namespace: { .Values.namespace }
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: adp-auth
+  template:
+    metadata:
+      labels:
+        app: adp-auth
+    spec:
+      containers:
+        - name: adp-auth
+          image: { .Values.adpAuth.image.url }
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: adp-auth
+  namespace: { .Values.namespace }
+spec:
+  selector:
+    app: adp-auth
+  ports:
+    - port: 80
+      targetPort: 8080
